@@ -1,16 +1,11 @@
 # Week Four: Installing environment
 
 
-export BOX64_LD_LIBRARY_PATH=/usr/lib/riscv64-linux-gnu/:$BOX64_LD_LIBRARY_PATH
-/usr/local/bin/box64 /usr/bin/steam
-
-
-
 Nice videos to watch: https://www.youtube.com/watch?v=WViYgkqtDAA&ab_channel=RISC-VInternational  
 
 **Working on Risc-V board using Box64**  
 Configuration  
-<img width="668" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/8333efab-d07b-459f-b9b9-df2f590c38da">  
+<img width="711" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/9032cd92-b041-4abd-bcbb-09b13ac9c626">  
 
 Compiling/Installing Box64  
 ```bash
@@ -23,10 +18,8 @@ sudo make install
 ```
 sudo systemctl restart systemd-binfmt
 ```
-<img width="732" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/62e4947c-e354-4341-8a50-562870b67543">  
-<img width="1055" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/1c7446b1-2ea9-4147-aeaf-4121e15d89b5">  
-<img width="671" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/fa945412-1ea5-4f60-af84-df766f1c6cf6">  
-<img width="440" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/9da116ac-49d6-40cb-b80f-6e1229ed8c23">  
+<img width="1060" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/421cb9ea-521f-4648-8a0c-984e9ee966b9">  
+
 
 Seems that `binfmt_misc` isn't built into our kernel, which is causing the `modprobe: FATAL: Module binfmt_misc not found` error. `# CONFIG_BINFMT_MISC is not set`, means `binfmt_misc` is not enabled in our kernel. 
 
@@ -52,7 +45,7 @@ First, set up the ssh
 sudo apt-get install openssh-server
 ssh debian@10.0.0.184
 ```
-<img width="598" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/b46d7641-0500-40f8-a3ca-68cdcf54e2cb">  
+<img width="1017" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/a56b2ab6-867b-4106-9b95-b40106876185">  
 
 The error is related to a security measure implemented in SSH to protect against malicious activities such as man-in-the-middle attacks. When you connect to a remote server for the first time via SSH, the server's public key is stored in a file on your local machine (in this case, the file is `~/.ssh/known_hosts`)   
 
@@ -73,7 +66,7 @@ sudo apt install cmake
 ```
 Now, rerun the `box64` configuration/installation steps  
 Installed Successfully  
-<img width="1236" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/a7228598-ba3f-4c49-8350-462190f8ba69">  
+<img width="1026" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/0684b69a-c969-4951-80a7-904ecf6992b3">  
 
 **Installing Wine**  
 References: https://www.youtube.com/watch?v=7lNnXcNgFFw&t=30s&ab_channel=TheByteman  
@@ -86,14 +79,13 @@ After you have installed and unzipped the file, move the file to your home direc
 **Installing Clash VPN**  
 
 Download risc-v version   
-<img width="859" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/5d5bfb40-46f5-4b13-a967-f54c0d7d33d4"> 
+<img width="903" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/0d401992-d923-4a51-952a-80ddf3b71fab">  
 
 Move file from host machine to 终端  
 ```
 scp ./clash-linux-riscv64-v1.17.0.gz debian@10.0.0.184:/home/debian
 ```
-<img width="1043" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/e202a755-96ad-47aa-bfea-eac4e2f506e6">  
-<img width="423" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/bc091b0a-d10d-4f58-951d-f07e0a3100f0">  
+<img width="1066" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/5611247e-cd64-403f-9834-ef6363ed5ba3">  
 
 for the wget -O /opt/clash/config.yaml "" change the content of the "" based on your Clash订阅链接  
 ```
@@ -127,21 +119,21 @@ Check the status with
 ```
 systemctl status clash
 ```
-<img width="933" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/f6b7a6e2-f68c-4bfa-87cc-7be21c246872">  
+<img width="956" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/d92fd6ae-6371-466f-93d0-c2647c47343e">  
 
 Next, go to `Settings` -> `Network` and then enable and set the proxy ports according to your configuration file  
-<img width="298" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/42c6fdf2-416b-4d6f-b9c8-6dc487ac9c43">  
-![image](https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/32cccfeb-d041-4b47-9e11-9d33dfc62298)  
+<img width="1027" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/df326293-e1e6-42ab-909b-b5b4348d7351">  
+  
 
 You can also set your proxy settings in the website http://clash.razord.top/#/proxies, note the ports should match the ones in your configuration file  
-<img width="392" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/37d10fca-9acb-4f72-afd2-a03bd9c7eed8">  
-![image](https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/6bf2a13f-1cd1-49cd-a6c6-c784853a7cfe)  
+<img width="418" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/3d0c6d00-4471-427f-94b1-ff70d47d042d">  
+<img width="1043" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/a513c343-c451-4844-af4e-863da6680801">  
 
 
 **Requesting实验室服务器**  
-<img width="558" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/562d0bab-6f3e-4f31-b1a0-c421590f14a6">  
+<img width="559" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/6ec14f31-ec87-4e88-825b-0b1453fe5d40">  
 ```
 ssh james@10.0.16.16
 ```
-<img width="561" alt="image" src="https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/e2823a26-a1e8-4d3d-a8e7-c6baba1a3ff5">  
+<img width="1055" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/28d9027b-0f4c-4c12-8f74-6b3c3a025aff">  
 
