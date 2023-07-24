@@ -1,4 +1,4 @@
-<img width="920" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/8299738a-cad5-4bbf-b4ed-22fc28b684f2"># Week Five: Gaming with Box64
+# Week Five: Gaming with Box64
 
 
 Nice videos to watch: https://www.youtube.com/watch?v=WViYgkqtDAA&ab_channel=RISC-VInternational  
@@ -34,6 +34,7 @@ Didn't realize so I proceeded... realized that this wasn't the right way so I tr
 sudo dpkg --remove-architecture amd64
 ```
 <img width="811" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/38427459-60eb-4c17-9dd5-31812e7a98a8">  
+
 At this point I should have stopped and looked but I thought that it was fine removing `amd64`  
 <img width="470" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/3254b044-efe2-4860-9e3d-f06be187bbf6">  
 <img width="833" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/c96d081b-3a1c-4a8f-a6a0-874e9aac184b">  
