@@ -23,26 +23,26 @@ deb http://deb.debian.org/debian bookworm-backports contrib main non-free-firmwa
 deb http://deb.debian.org/debian-security bookworm-security contrib main non-free-firmware
 ```
 
-<img width="619" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/1a3344a5-8553-4443-a994-7d91912d6854">  
+<img width="619" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/1a3344a5-8553-4443-a994-7d91912d6854">   
 
 
 Tried to resolve the errors above with  
-<img width="620" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/9c8a618f-03c0-4743-8054-5d62ffaab33a">  
+<img width="620" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/9c8a618f-03c0-4743-8054-5d62ffaab33a">    
 Replaced `systemd-sysv` with `libpam-systemd:amd64` and `libnss-systemd:amd64`  
 Didn't realize so I proceeded... realized that this wasn't the right way so I tried to revert the changes  
 ```
 sudo dpkg --remove-architecture amd64
 ```
-<img width="811" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/38427459-60eb-4c17-9dd5-31812e7a98a8">  
+<img width="811" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/38427459-60eb-4c17-9dd5-31812e7a98a8">   
 
 At this point I should have stopped and looked but I thought that it was fine removing `amd64`  
-<img width="470" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/3254b044-efe2-4860-9e3d-f06be187bbf6">  
-<img width="833" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/c96d081b-3a1c-4a8f-a6a0-874e9aac184b">  
+<img width="470" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/3254b044-efe2-4860-9e3d-f06be187bbf6">    
+<img width="833" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/c96d081b-3a1c-4a8f-a6a0-874e9aac184b">    
 
-System broke :(   
+System broke :(     
+<img width="831" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/c74a5455-d08b-4023-9102-2d0966bc564c">    
+<img width="832" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/9673b408-cf22-486e-b664-5f9a9e03a375">    
 
-<img width="831" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/c74a5455-d08b-4023-9102-2d0966bc564c">  
-<img width="832" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/9673b408-cf22-486e-b664-5f9a9e03a375">  
 
 Fixed by installing back `gnome` (system didn't break, just some dependencies got disrupted)  
 Back and running (make sure you can connect to internet first, I deleted internet related files too)  
@@ -51,7 +51,7 @@ sudo apt install gnome
 ```
 
 Somehow the SD card with additional storage is also reognized now (might have to change permission to get working though)  
-<img width="707" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/4b93863f-1cd4-4941-9074-88a0ee1201d5">  
+<img width="707" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/4b93863f-1cd4-4941-9074-88a0ee1201d5">   
 
 
 **Creating x86 Workspace**  
