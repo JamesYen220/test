@@ -1,4 +1,4 @@
-<img width="822" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/f1782a57-a35f-477f-aafb-a6e16c09f10e">  # Week Six: Gaming with Box64
+# Week Six: Gaming with Box64
 
 **Migrating from x86 to Riscv (Part2)**  
 
