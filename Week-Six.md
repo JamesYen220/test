@@ -151,7 +151,7 @@ After you run `BOX64_BASH=~/box64/tests/bash box64 ./stardew_valley_1_5_6_198883
 cd Downloads
 BOX64_BASH=~/box64/tests/bash box64 ./stardew_valley_1_5_6_1988831614_53040.sh
 ```
-![image](https://github.com/JamesYen220/RiscV-SummerTraining/assets/100248639/950a24e0-6f2d-4c97-a492-e877052d1845) 
+<img width="826" alt="image" src="https://github.com/JamesYen220/test/assets/100248639/f9c44947-2e35-41a8-8387-cbd6895f27e6">   
 
 Start game with  
 ```
